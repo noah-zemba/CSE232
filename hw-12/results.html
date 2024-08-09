@@ -1,0 +1,175 @@
+<h1>Autograde Results</h1>
+
+<h2>Final Score: <span style="color: blue">25%</span></h2>
+
+<table style="background-color:#3fc0FF;" cellpadding="5px" border="1px solid black" cellspacing="0"><tr><th>Test Case<th>Status<th>Checks<th>Passed<th>Failed<th>Score</tr>
+<tr onclick="window.location='#Test0';"><td>0: FindSmallestIndexRange Returns Correct Iterator<td>Checks Failing<td>5<td>2<td>3<td>0 / 0</tr>
+<tr onclick="window.location='#Test1';"><td>1: FindSmallestIndexRange Doesn't go out of bounds<td>Passing<td>2<td>2<td>0<td>0 / 0</tr>
+<tr onclick="window.location='#Test2';"><td>2: FindSmallestIndexRange Another<td>Checks Failing<td>8<td>4<td>4<td>0 / 0</tr>
+<tr onclick="window.location='#Test3';"><td>3: FindSmallestIndexRange Hidden 1<td>Checks Failing<td>8<td>4<td>4<td>0 / 2</tr>
+<tr onclick="window.location='#Test4';"><td>4: FindSmallestIndexRange Check Iterator<td>Passing<td>4<td>4<td>0<td>0 / 0</tr>
+<tr onclick="window.location='#Test5';"><td>5: FindSmallestIndexRange Check Iterator Hidden<td>Passing<td>4<td>4<td>0<td>1 / 1</tr>
+<tr onclick="window.location='#Test6';"><td>6: DoubleIteratorRange Ints<td>Compilation Error<td>2<td>0<td>2<td>0 / 0</tr>
+<tr onclick="window.location='#Test7';"><td>7: DoubleIteratorRange Floats<td>Compilation Error<td>3<td>0<td>3<td>0 / 0</tr>
+<tr onclick="window.location='#Test8';"><td>8: DoubleIteratorRange Hidden<td>Compilation Error<td>3<td>0<td>3<td>0 / 1</tr>
+<tr><th>TOTAL<td><td><td><td><td>1 / 4</tr></table>
+<p>Click on a row above to jump to the test case or scroll down for more details.<br>
+<hr><h2 id="Test0">Test Case 0: FindSmallestIndexRange Returns Correct Iterator</h2>
+<b>Result: <span style="color: Red">FAILED due to unsuccessful check.</b></span><br><br>
+
+
+Test: <b><code>*iter_smallest == 2</code></b>
+<p>Result: <span style="color: red"><b>Failed.</b></span><br>
+Error Message: [ERROR]<br>
+<table><tr><td>Left side:<td><code>*iter_smallest</code><td>&nbsp;&nbsp;==><td><code>&quot;4&quot;</code></tr>
+<tr><td>Right side:<td><code>2</code><td>&nbsp;&nbsp;==><td><code>&quot;2&quot;</code></tr></table><br>
+
+Test: <b><code>*iter_smallest == 3</code></b>
+<p>Result: <span style="color: red"><b>Failed.</b></span><br>
+Error Message: [ERROR]<br>
+<table><tr><td>Left side:<td><code>*iter_smallest</code><td>&nbsp;&nbsp;==><td><code>&quot;5&quot;</code></tr>
+<tr><td>Right side:<td><code>3</code><td>&nbsp;&nbsp;==><td><code>&quot;3&quot;</code></tr></table><br>
+
+Test: <b><code>*iter_smallest == -1</code></b>
+<p>Result: <span style="color: red"><b>Failed.</b></span><br>
+Error Message: [ERROR]<br>
+<table><tr><td>Left side:<td><code>*iter_smallest</code><td>&nbsp;&nbsp;==><td><code>&quot;1&quot;</code></tr>
+<tr><td>Right side:<td><code>-1</code><td>&nbsp;&nbsp;==><td><code>&quot;-1&quot;</code></tr></table><br>
+Sourcecode for Test:<br><br>
+<table style="background-color:#E3E0CF;"><tr><td><pre>
+
+std::vector&lt;int&gt; data = {6, 1, 5, 4, 3, 2, -1};
+auto iter_smallest = FindSmallestIndexRange(data, 2, 5);
+CHECK(*iter_smallest == 2);
+iter_smallest = FindSmallestIndexRange(data, 2, 4);
+CHECK(*iter_smallest == 3);
+iter_smallest = FindSmallestIndexRange(data, 1, 5);
+CHECK(*iter_smallest == 1);
+iter_smallest = FindSmallestIndexRange(data, 0, 5);
+CHECK(*iter_smallest == 1);
+iter_smallest = FindSmallestIndexRange(data, 0, 6);
+CHECK(*iter_smallest == -1);
+</pre></tr></table>
+<p>No Compilation Errors or Warnings.<br><br>
+<h2 id="Test1">Test Case 1: FindSmallestIndexRange Doesn't go out of bounds</h2>
+<b>Result: <span style="color: Green">PASSED!</b></span><br><br>
+
+<p>No Compilation Errors or Warnings.<br><br>
+<h2 id="Test2">Test Case 2: FindSmallestIndexRange Another</h2>
+<b>Result: <span style="color: Red">FAILED due to unsuccessful check.</b></span><br><br>
+
+
+Test: <b><code>*iter_smallest == 2</code></b>
+<p>Result: <span style="color: red"><b>Failed.</b></span><br>
+Error Message: [ERROR]<br>
+<table><tr><td>Left side:<td><code>*iter_smallest</code><td>&nbsp;&nbsp;==><td><code>&quot;4&quot;</code></tr>
+<tr><td>Right side:<td><code>2</code><td>&nbsp;&nbsp;==><td><code>&quot;2&quot;</code></tr></table><br>
+
+Test: <b><code>*iter_smallest == 3</code></b>
+<p>Result: <span style="color: red"><b>Failed.</b></span><br>
+Error Message: [ERROR]<br>
+<table><tr><td>Left side:<td><code>*iter_smallest</code><td>&nbsp;&nbsp;==><td><code>&quot;5&quot;</code></tr>
+<tr><td>Right side:<td><code>3</code><td>&nbsp;&nbsp;==><td><code>&quot;3&quot;</code></tr></table><br>
+
+Test: <b><code>*iter_smallest == -1</code></b>
+<p>Result: <span style="color: red"><b>Failed.</b></span><br>
+Error Message: [ERROR]<br>
+<table><tr><td>Left side:<td><code>*iter_smallest</code><td>&nbsp;&nbsp;==><td><code>&quot;1&quot;</code></tr>
+<tr><td>Right side:<td><code>-1</code><td>&nbsp;&nbsp;==><td><code>&quot;-1&quot;</code></tr></table><br>
+
+Test: <b><code>*iter_smallest == 1</code></b>
+<p>Result: <span style="color: red"><b>Failed.</b></span><br>
+Error Message: [ERROR]<br>
+<table><tr><td>Left side:<td><code>*iter_smallest</code><td>&nbsp;&nbsp;==><td><code>&quot;2&quot;</code></tr>
+<tr><td>Right side:<td><code>1</code><td>&nbsp;&nbsp;==><td><code>&quot;1&quot;</code></tr></table><br>
+Sourcecode for Test:<br><br>
+<table style="background-color:#E3E0CF;"><tr><td><pre>
+
+std::vector&lt;int&gt; data = {6, 1, 5, 4, 3, 2, -1};
+auto iter_smallest = FindSmallestIndexRange(data, 2, 5);
+CHECK(*iter_smallest == 2);
+iter_smallest = FindSmallestIndexRange(data, 2, 4);
+CHECK(*iter_smallest == 3);
+iter_smallest = FindSmallestIndexRange(data, 1, 5);
+CHECK(*iter_smallest == 1);
+iter_smallest = FindSmallestIndexRange(data, 0, 5);
+CHECK(*iter_smallest == 1);
+iter_smallest = FindSmallestIndexRange(data, 0, 6);
+CHECK(*iter_smallest == -1);
+iter_smallest = FindSmallestIndexRange(data, 0, 20);
+CHECK(*iter_smallest == -1);
+std::vector&lt;int&gt; data2 = {6, 1, 5, 0, 3, 2, 1};
+iter_smallest = FindSmallestIndexRange(data2, 1, 7);
+CHECK(*iter_smallest == 0);
+iter_smallest = FindSmallestIndexRange(data2, 4, 7);
+CHECK(*iter_smallest == 1);
+</pre></tr></table>
+<p>No Compilation Errors or Warnings.<br><br>
+<h2 id="Test3">Test Case 3: FindSmallestIndexRange Hidden 1 <small>[HIDDEN]</small></h2>
+<b>Result: <span style="color: Red">FAILED due to unsuccessful check.</b></span><br><br>
+
+<h2 id="Test4">Test Case 4: FindSmallestIndexRange Check Iterator</h2>
+<b>Result: <span style="color: Green">PASSED!</b></span><br><br>
+
+<p>No Compilation Errors or Warnings.<br><br>
+<h2 id="Test5">Test Case 5: FindSmallestIndexRange Check Iterator Hidden <small>[HIDDEN]</small></h2>
+<b>Result: <span style="color: Green">PASSED!</b></span><br><br>
+
+<h2 id="Test6">Test Case 6: DoubleIteratorRange Ints</h2>
+<b>Result: <span style="color: DarkRed">FAILED during compilation.</b></span><br><br>
+
+Sourcecode for Test:<br><br>
+<table style="background-color:#E3E0CF;"><tr><td><pre>
+
+std::vector&lt;int&gt; data = {6, 1, 5, 0, 3, 2, 1};
+DoubleIteratorRange(data.begin(), data.end());
+std::vector&lt;int&gt; expected = {12, 2, 10, 0, 6, 4, 2};
+CHECK(data == expected);
+DoubleIteratorRange(data.rbegin() + 1, data.rend() - 2);
+std::vector&lt;int&gt; expected2 = {12, 2, 20, 0, 12, 8, 2};
+CHECK(data == expected2);
+</pre></tr></table>
+<p>Compile Results for Test:<br><br>
+<table style="background-color:Lavender"><tr><td style="width:800px; display:block;"><pre>
+
+.guides/secure/Iterators/results/Test6.cpp: In function ‘void _emperfect_main()’:
+.guides/secure/Iterators/results/Test6.cpp:143:1: error: ‘DoubleIteratorRange’ was not declared in this scope
+  143 | DoubleIteratorRange(data.begin(), data.end());
+      | ^~~~~~~~~~~~~~~~~~~
+</pre></tr></table>
+<h2 id="Test7">Test Case 7: DoubleIteratorRange Floats</h2>
+<b>Result: <span style="color: DarkRed">FAILED during compilation.</b></span><br><br>
+
+Sourcecode for Test:<br><br>
+<table style="background-color:#E3E0CF;"><tr><td><pre>
+
+std::vector&lt;float&gt; data = {5.6, 2.3, 12, 19};
+DoubleIteratorRange(data.begin(), data.end());
+std::vector&lt;float&gt; expected = {11.2, 4.6, 24, 38};
+CHECK(data == expected);
+// Note I&apos;m specifying the type of the iterator
+DoubleIteratorRange&lt;std::vector&lt;float&gt;::reverse_iterator&gt;(data.rbegin() + 1, data.rend());
+std::vector&lt;float&gt; expected2 = {22.4, 9.2, 48, 38};
+CHECK(data == expected2);
+std::string str = &quot;()&quot;;
+DoubleIteratorRange&lt;std::string::iterator&gt;(str.begin(), str.end());
+std::string expected3 = &quot;PR&quot;;
+CHECK(str == expected3);
+</pre></tr></table>
+<p>Compile Results for Test:<br><br>
+<table style="background-color:Lavender"><tr><td style="width:800px; display:block;"><pre>
+
+.guides/secure/Iterators/results/Test7.cpp: In function ‘void _emperfect_main()’:
+.guides/secure/Iterators/results/Test7.cpp:143:1: error: ‘DoubleIteratorRange’ was not declared in this scope
+  143 | DoubleIteratorRange(data.begin(), data.end());
+      | ^~~~~~~~~~~~~~~~~~~
+.guides/secure/Iterators/results/Test7.cpp:166:57: error: expected primary-expression before ‘&gt;’ token
+  166 | DoubleIteratorRange&lt;std::vector&lt;float&gt;::reverse_iterator&gt;(data.rbegin() + 1, data.rend());
+      |                                                         ^
+.guides/secure/Iterators/results/Test7.cpp:189:42: error: expected primary-expression before ‘&gt;’ token
+  189 | DoubleIteratorRange&lt;std::string::iterator&gt;(str.begin(), str.end());
+      |                                          ^
+</pre></tr></table>
+<h2 id="Test8">Test Case 8: DoubleIteratorRange Hidden <small>[HIDDEN]</small></h2>
+<b>Result: <span style="color: DarkRed">FAILED during compilation.</b></span><br><br>
+

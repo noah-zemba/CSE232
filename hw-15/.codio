@@ -1,0 +1,16 @@
+{
+// Configure your Run and Preview buttons here.
+
+// Run button configuration
+  "commands": {
+        "Node version": "node --version"
+  },
+
+// Preview button configuration
+  "preview": {
+        "Project Index (static)": "https://{{domain}}/{{index}}",
+        "Current File (static)": "https://{{domain}}/{{filepath}}",
+        "Box URL": "https://{{domain3000}}/"
+  },
+  "debugger": [{"type":"GDB","command":"./my_program","before":"g++ -std=c++20 -Wall -Wextra -g CensoredCopy/main.cpp CensoredCopy/func.cpp -o my_program","uuid":"bd260749-92d4-4427-5120-99e57db3ca86","name":"Debug"}]
+}

@@ -1,0 +1,173 @@
+<h1>Autograde Results</h1>
+
+<h2>Final Score: <span style="color: blue">0%</span></h2>
+
+<table style="background-color:#3fc0FF;" cellpadding="5px" border="1px solid black" cellspacing="0"><tr><th>Test Case<th>Status<th>Checks<th>Passed<th>Failed<th>Score</tr>
+<tr onclick="window.location='#Test0';"><td>0: All lines are Alphabetic<td>Passing<td>0<td>0<td>0<td>0 / 0</tr>
+<tr onclick="window.location='#Test1';"><td>1: No lines are Alphabetic<td>Incorrect Output<td>0<td>0<td>0<td>0 / 0</tr>
+<tr onclick="window.location='#Test2';"><td>2: Some lines are Alphabetic<td>Incorrect Output<td>0<td>0<td>0<td>0 / 0</tr>
+<tr onclick="window.location='#Test3';"><td>3: Some lines are Alphabetic Hidden<td>Incorrect Output<td>0<td>0<td>0<td>0 / 5</tr>
+<tr onclick="window.location='#Test4';"><td>4: Preserve Whitespace<td>Incorrect Output<td>0<td>0<td>0<td>0 / 0</tr>
+<tr onclick="window.location='#Test5';"><td>5: Preserve Whitespace Hidden<td>Incorrect Output<td>0<td>0<td>0<td>0 / 10</tr>
+<tr onclick="window.location='#Test6';"><td>6: Case Insensitve<td>Incorrect Output<td>0<td>0<td>0<td>0 / 0</tr>
+<tr onclick="window.location='#Test7';"><td>7: Case Insensitve Hidden<td>Incorrect Output<td>0<td>0<td>0<td>0 / 10</tr>
+<tr><th>TOTAL<td><td><td><td><td>0 / 25</tr></table>
+<p>Click on a row above to jump to the test case or scroll down for more details.<br>
+<hr><h2 id="Test0">Test Case 0: All lines are Alphabetic</h2>
+<b>Result: <span style="color: Green">PASSED!</b></span><br><br>
+
+<h2 id="Test1">Test Case 1: No lines are Alphabetic</h2>
+<b>Result: <span style="color: OrangeRed">FAILED due to mis-matched output.</b></span><br><br>
+
+<table>
+<tr><th>Input</tr>
+<tr><td valign="top" style="background-color:LightGreen"><pre>
+apple carrot banana
+apple a app
+in the above line shorter prefixes are alphabetically first which is why the line fails 
+</pre></tr></table>
+<table>
+<tr><th>Your Output<th> <th>Expected Output</tr>
+<tr><td valign="top" style="background-color:LightGoldenrodYellow"><pre>
+apple banana carrot 
+a app apple 
+above alphabetically are fails first in is line line prefixes shorter the the which why 
+</pre>
+<td>&nbsp;<td valign="top" style="background-color:LightBlue"><pre>
+</pre></tr></table>
+<table>
+<tr><th>Diff</tr>
+<tr><td valign="top" style="background-color:LightGray"><pre>
+<span style="background-color:LightCoral">apple banana carrot 
+a app apple 
+above alphabetically are fails first in is line line prefixes shorter the the which why 
+</span></pre></tr></table>
+<h2 id="Test2">Test Case 2: Some lines are Alphabetic</h2>
+<b>Result: <span style="color: OrangeRed">FAILED due to mis-matched output.</b></span><br><br>
+
+<table>
+<tr><th>Input</tr>
+<tr><td valign="top" style="background-color:LightGreen"><pre>
+apple banana carrot
+banana banana carrot
+dog mal nice
+line that fails
+another line that fails
+good line
+</pre></tr></table>
+<table>
+<tr><th>Your Output<th> <th>Expected Output</tr>
+<tr><td valign="top" style="background-color:LightGoldenrodYellow"><pre>
+apple banana carrot 
+banana banana carrot 
+dog mal nice 
+fails line that 
+another fails line that 
+good line 
+</pre>
+<td>&nbsp;<td valign="top" style="background-color:LightBlue"><pre>
+apple banana carrot
+banana banana carrot
+dog mal nice
+good line
+</pre></tr></table>
+<table>
+<tr><th>Diff</tr>
+<tr><td valign="top" style="background-color:LightGray"><pre>
+<span style="background-color:LightGray">apple banana carrot</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+banana banana carrot</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+dog mal nice</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+</span><span style="background-color:LightCoral">fails line that 
+another fails line that 
+</span><span style="background-color:LightGray">good line</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+</span></pre></tr></table>
+<h2 id="Test3">Test Case 3: Some lines are Alphabetic Hidden <small>[HIDDEN]</small></h2>
+<b>Result: <span style="color: OrangeRed">FAILED due to mis-matched output.</b></span><br><br>
+
+<h2 id="Test4">Test Case 4: Preserve Whitespace</h2>
+<b>Result: <span style="color: OrangeRed">FAILED due to mis-matched output.</b></span><br><br>
+
+<table>
+<tr><th>Input</tr>
+<tr><td valign="top" style="background-color:LightGreen"><pre>
+apple banana carrot
+banana banana carrot
+dog mal nice
+line that fails
+another line that fails
+make sure to preserve whitespace
+a      b  c     d    egg
+good line
+</pre></tr></table>
+<table>
+<tr><th>Your Output<th> <th>Expected Output</tr>
+<tr><td valign="top" style="background-color:LightGoldenrodYellow"><pre>
+apple banana carrot 
+banana banana carrot 
+dog mal nice 
+fails line that 
+another fails line that 
+make preserve sure to whitespace 
+a b c d egg 
+good line 
+</pre>
+<td>&nbsp;<td valign="top" style="background-color:LightBlue"><pre>
+apple banana carrot
+banana banana carrot
+dog mal nice
+a      b  c     d    egg
+good line
+</pre></tr></table>
+<table>
+<tr><th>Diff</tr>
+<tr><td valign="top" style="background-color:LightGray"><pre>
+<span style="background-color:LightGray">apple banana carrot</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+banana banana carrot</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+dog mal nice</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+</span><span style="background-color:LightCoral">f</span><span style="background-color:LightGray">a</span><span style="background-color:LightCoral">ils</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">line</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">that</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">
+another</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">fails</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">line</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">that</span><span style="background-color:LightGreen">b</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">
+make</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">preserve</span><span style="background-color:LightGreen">c</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">sure</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">to</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">whitespace</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">
+a</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">b</span><span style="background-color:LightGreen">d</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">c</span><span style="background-color:LightGray"> </span><span style="background-color:LightCoral">d</span><span style="background-color:LightGray"> </span><span style="background-color:LightGreen"> </span><span style="background-color:LightGray">egg</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+good line</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+</span></pre></tr></table>
+<h2 id="Test5">Test Case 5: Preserve Whitespace Hidden <small>[HIDDEN]</small></h2>
+<b>Result: <span style="color: OrangeRed">FAILED due to mis-matched output.</b></span><br><br>
+
+<h2 id="Test6">Test Case 6: Case Insensitve</h2>
+<b>Result: <span style="color: OrangeRed">FAILED due to mis-matched output.</b></span><br><br>
+
+<table>
+<tr><th>Input</tr>
+<tr><td valign="top" style="background-color:LightGreen"><pre>
+apple banana carrot
+Apple banana Carrot
+MsU msu MSU mSU Wisconsin
+MsU msu MSU Wisconsin mSU
+apple carrot banana
+</pre></tr></table>
+<table>
+<tr><th>Your Output<th> <th>Expected Output</tr>
+<tr><td valign="top" style="background-color:LightGoldenrodYellow"><pre>
+apple banana carrot 
+Apple Carrot banana 
+MSU MsU Wisconsin mSU msu 
+MSU MsU Wisconsin mSU msu 
+apple banana carrot 
+</pre>
+<td>&nbsp;<td valign="top" style="background-color:LightBlue"><pre>
+apple banana carrot
+Apple banana Carrot
+MsU msu MSU mSU Wisconsin
+</pre></tr></table>
+<table>
+<tr><th>Diff</tr>
+<tr><td valign="top" style="background-color:LightGray"><pre>
+<span style="background-color:LightGray">apple banana carrot</span><span style="background-color:LightCoral"> </span><span style="background-color:LightGray">
+Apple </span><span style="background-color:LightCoral">Carrot </span><span style="background-color:LightGray">banana </span><span style="background-color:LightGreen">Carrot</span><span style="background-color:LightGray">
+M</span><span style="background-color:LightCoral">SU M</span><span style="background-color:LightGray">sU </span><span style="background-color:LightCoral">Wisconsin </span><span style="background-color:LightGray">m</span><span style="background-color:LightCoral">SU m</span><span style="background-color:LightGray">su </span><span style="background-color:LightCoral">
+</span><span style="background-color:LightGray">MSU </span><span style="background-color:LightCoral">Ms</span><span style="background-color:LightGreen">mS</span><span style="background-color:LightGray">U Wisconsin</span><span style="background-color:LightCoral"> mSU msu </span><span style="background-color:LightGray">
+</span><span style="background-color:LightCoral">apple banana carrot 
+</span></pre></tr></table>
+<h2 id="Test7">Test Case 7: Case Insensitve Hidden <small>[HIDDEN]</small></h2>
+<b>Result: <span style="color: OrangeRed">FAILED due to mis-matched output.</b></span><br><br>
+

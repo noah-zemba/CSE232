@@ -1,0 +1,7 @@
+apple banana carrot
+cpp haskell javascript python ruby
+not in order
+aaabbbccc aabbcc bvf cfgh cfghr zzz
+MSU msu MsU  mSu   Wisconsin
+also not ordered correctly
+Apple banana    Carrot
